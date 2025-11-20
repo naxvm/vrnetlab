@@ -202,6 +202,9 @@ class PAN_vm(vrnetlab.VM):
         self.logger.debug("committing user config...")
         self.wait_write("commit", "#")
         self.wait_write("exit", "#")
+        self.wait_write("set ssh service-restart mgmt", ">")
+        self.wait_write("y", "Continue? (y or n)")
+        self.wait_write("", wait=None)
 
 
 class PAN(vrnetlab.VR):
