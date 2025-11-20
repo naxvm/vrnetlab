@@ -89,14 +89,14 @@ class Ubuntu_vm(vrnetlab.VM):
             cfg_file.write("runcmd:\n")
             cfg_file.write("  - touch /etc/cloud/cloud-init.disabled\n")
 
-        with open("/network_config.yaml", "w") as net_cfg_file:
-            net_cfg_file.write("version: 2\n")
-            net_cfg_file.write("ethernets:\n")
-            net_cfg_file.write("  enp1s0:\n")
-            net_cfg_file.write("    addresses: [10.0.0.15/24]\n")
-            net_cfg_file.write("    gateway4: 10.0.0.2\n")
-            net_cfg_file.write("    nameservers:\n")
-            net_cfg_file.write("        addresses: [ 9.9.9.9 ]\n")
+        # with open("/network_config.yaml", "w") as net_cfg_file:
+        #     net_cfg_file.write("version: 2\n")
+        #     net_cfg_file.write("ethernets:\n")
+        #     net_cfg_file.write("  enp1s0:\n")
+        #     net_cfg_file.write("    addresses: [10.0.0.15/24]\n")
+        #     net_cfg_file.write("    gateway4: 10.0.0.2\n")
+        #     net_cfg_file.write("    nameservers:\n")
+        #     net_cfg_file.write("        addresses: [ 9.9.9.9 ]\n")
 
         cloud_localds_args = [
             "cloud-localds",
